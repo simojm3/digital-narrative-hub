@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className="bg-secondary text-white py-16">
       <div className="container grid grid-cols-1 md:grid-cols-4 gap-12">
         <div>
-          <h3 className="text-2xl font-bold mb-6">AgenceWeb</h3>
+          <h3 className="text-2xl font-bold mb-6">MJ Web Tec</h3>
           <p className="text-gray-400">
             Votre partenaire digital pour des solutions web innovantes et performantes.
           </p>
@@ -17,19 +17,19 @@ const Footer = () => {
           <div className="space-y-4">
             <div className="flex items-center space-x-3">
               <Mail size={20} className="text-primary" />
-              <a href="mailto:contact@agenceweb.fr" className="text-gray-400 hover:text-white transition-colors">
-                contact@agenceweb.fr
+              <a href="mailto:info@jmwebtec.com" className="text-gray-400 hover:text-white transition-colors">
+                info@jmwebtec.com
               </a>
             </div>
             <div className="flex items-center space-x-3">
               <Phone size={20} className="text-primary" />
-              <a href="tel:+33123456789" className="text-gray-400 hover:text-white transition-colors">
-                +33 1 23 45 67 89
+              <a href="tel:+41791234567" className="text-gray-400 hover:text-white transition-colors">
+                +41 79 123 45 67
               </a>
             </div>
             <div className="flex items-center space-x-3">
               <MapPin size={20} className="text-primary" />
-              <span className="text-gray-400">Paris, France</span>
+              <span className="text-gray-400">Strasse 6, 3008 Berne</span>
             </div>
           </div>
         </div>
@@ -74,7 +74,7 @@ const Footer = () => {
 
       <div className="container mt-12 pt-8 border-t border-gray-800">
         <p className="text-center text-gray-400">
-          © {new Date().getFullYear()} AgenceWeb. Tous droits réservés.
+          © {new Date().getFullYear()} MJ Web Tec. Tous droits réservés.
         </p>
       </div>
     </footer>

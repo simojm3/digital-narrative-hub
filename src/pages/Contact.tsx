@@ -22,7 +22,7 @@ const Contact = () => {
         from_email: formData.email,
         phone: formData.phone,
         message: formData.message,
-        to_email: 'jma3amohamed@gmail.com'
+        to_email: 'info@jmwebtec.com'
       };
 
       await emailjs.send(
@@ -50,7 +50,6 @@ const Contact = () => {
     <div className="min-h-screen">
       <Navbar />
       
-      {/* Hero Section */}
       <section className="pt-32 pb-20 gradient-bg">
         <div className="container text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -62,11 +61,9 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Contact Section */}
       <section className="section-padding">
         <div className="container">
           <div className="grid md:grid-cols-2 gap-12">
-            {/* Contact Info */}
             <div className="space-y-8">
               <h2 className="text-3xl font-bold mb-6">Nos Coordonnées</h2>
               
@@ -74,8 +71,8 @@ const Contact = () => {
                 <Mail className="w-6 h-6 text-primary mt-1" />
                 <div>
                   <h3 className="font-semibold mb-2">Email</h3>
-                  <a href="mailto:jma3amohamed@gmail.com" className="text-muted hover:text-primary transition-colors">
-                    jma3amohamed@gmail.com
+                  <a href="mailto:info@jmwebtec.com" className="text-muted hover:text-primary transition-colors">
+                    info@jmwebtec.com
                   </a>
                 </div>
               </div>
@@ -84,8 +81,8 @@ const Contact = () => {
                 <Phone className="w-6 h-6 text-primary mt-1" />
                 <div>
                   <h3 className="font-semibold mb-2">Téléphone</h3>
-                  <a href="tel:+33123456789" className="text-muted hover:text-primary transition-colors">
-                    +33 1 23 45 67 89
+                  <a href="tel:+41791234567" className="text-muted hover:text-primary transition-colors">
+                    +41 79 123 45 67
                   </a>
                 </div>
               </div>
@@ -95,14 +92,13 @@ const Contact = () => {
                 <div>
                   <h3 className="font-semibold mb-2">Adresse</h3>
                   <p className="text-muted">
-                    123 Avenue des Champs-Élysées<br />
-                    75008 Paris, France
+                    Strasse 6<br />
+                    3008 Berne, Suisse
                   </p>
                 </div>
               </div>
             </div>
 
-            {/* Contact Form */}
             <form onSubmit={handleSubmit} className="space-y-6 bg-gray-50 p-8 rounded-2xl">
               <div>
                 <label htmlFor="name" className="block font-medium mb-2">
