@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { Mail, Phone, MapPin } from "lucide-react";
 import { toast } from "sonner";
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -12,10 +13,30 @@ const Contact = () => {
     message: ""
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast.success("Message envoyé avec succès !");
-    setFormData({ name: "", email: "", phone: "", message: "" });
+    
+    try {
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        phone: formData.phone,
+        message: formData.message,
+        to_email: 'jma3amohamed@gmail.com'
+      };
+
+      await emailjs.send(
+        'YOUR_SERVICE_ID', // Vous devrez remplacer ceci
+        'YOUR_TEMPLATE_ID', // Vous devrez remplacer ceci
+        templateParams,
+        'YOUR_PUBLIC_KEY' // Vous devrez remplacer ceci
+      );
+
+      toast.success("Message envoyé avec succès !");
+      setFormData({ name: "", email: "", phone: "", message: "" });
+    } catch (error) {
+      toast.error("Erreur lors de l'envoi du message. Veuillez réessayer.");
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -53,8 +74,8 @@ const Contact = () => {
                 <Mail className="w-6 h-6 text-primary mt-1" />
                 <div>
                   <h3 className="font-semibold mb-2">Email</h3>
-                  <a href="mailto:contact@agenceweb.fr" className="text-muted hover:text-primary transition-colors">
-                    contact@agenceweb.fr
+                  <a href="mailto:jma3amohamed@gmail.com" className="text-muted hover:text-primary transition-colors">
+                    jma3amohamed@gmail.com
                   </a>
                 </div>
               </div>
