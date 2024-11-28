@@ -26,10 +26,10 @@ const Contact = () => {
       };
 
       await emailjs.send(
-        'YOUR_SERVICE_ID', // Vous devrez remplacer ceci
-        'YOUR_TEMPLATE_ID', // Vous devrez remplacer ceci
+        'service_1jaaj2r',
+        'template_9b20o39',
         templateParams,
-        'YOUR_PUBLIC_KEY' // Vous devrez remplacer ceci
+        '-KU-osj1J1gjFlCZQ'
       );
 
       toast.success("Message envoyé avec succès !");
