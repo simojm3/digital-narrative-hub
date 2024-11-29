@@ -22,14 +22,13 @@ const Contact = () => {
         from_email: formData.email,
         phone: formData.phone,
         message: formData.message,
-        to_email: 'info@jmwebtec.com'
       };
 
       await emailjs.send(
-        'service_1jaaj2r',
-        'template_9b20o39',
+        'YOUR_SERVICE_ID',  // Replace with your EmailJS service ID
+        'YOUR_TEMPLATE_ID', // Replace with your EmailJS template ID
         templateParams,
-        '-KU-osj1J1gjFlCZQ'
+        'YOUR_PUBLIC_KEY'   // Replace with your EmailJS public key
       );
 
       toast.success("Message envoyé avec succès !");
