@@ -1,9 +1,12 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { Mail, Phone, MapPin } from "lucide-react";
 import { toast } from "sonner";
 import emailjs from '@emailjs/browser';
+
+// Initialisation de EmailJS avec votre clé publique
+emailjs.init("VOTRE_CLE_PUBLIQUE_EMAILJS");
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -25,15 +28,16 @@ const Contact = () => {
       };
 
       await emailjs.send(
-        'YOUR_SERVICE_ID',  // Replace with your EmailJS service ID
-        'YOUR_TEMPLATE_ID', // Replace with your EmailJS template ID
+        'VOTRE_SERVICE_ID',  // Remplacez par votre Service ID EmailJS
+        'VOTRE_TEMPLATE_ID', // Remplacez par votre Template ID EmailJS
         templateParams,
-        'YOUR_PUBLIC_KEY'   // Replace with your EmailJS public key
+        'VOTRE_CLE_PUBLIQUE_EMAILJS'  // Remplacez par votre Public Key EmailJS
       );
 
       toast.success("Message envoyé avec succès !");
       setFormData({ name: "", email: "", phone: "", message: "" });
     } catch (error) {
+      console.error('Erreur EmailJS:', error);
       toast.error("Erreur lors de l'envoi du message. Veuillez réessayer.");
     }
   };
