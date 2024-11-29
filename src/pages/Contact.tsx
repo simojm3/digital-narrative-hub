@@ -6,7 +6,7 @@ import { toast } from "sonner";
 import emailjs from '@emailjs/browser';
 
 // Initialisation de EmailJS avec votre clé publique
-emailjs.init("VOTRE_CLE_PUBLIQUE_EMAILJS");
+emailjs.init("-KU-osj1J1gjFlCZQ");
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -28,10 +28,10 @@ const Contact = () => {
       };
 
       await emailjs.send(
-        'VOTRE_SERVICE_ID',  // Remplacez par votre Service ID EmailJS
-        'VOTRE_TEMPLATE_ID', // Remplacez par votre Template ID EmailJS
+        'service_1jaaj2r',
+        'template_9b20o39',
         templateParams,
-        'VOTRE_CLE_PUBLIQUE_EMAILJS'  // Remplacez par votre Public Key EmailJS
+        '-KU-osj1J1gjFlCZQ'
       );
 
       toast.success("Message envoyé avec succès !");
