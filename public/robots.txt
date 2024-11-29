@@ -1,6 +1,6 @@
 User-agent: *
 Allow: /
-Sitemap: https://mjwebtec.com/sitemap.xml
+Sitemap: https://jmwebtec.com/sitemap.xml
 
 # Allow crawling of all content
 Disallow:
